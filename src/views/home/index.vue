@@ -1,16 +1,6 @@
 <template>
   <a-row class="home-container">
     <a-col :span="3">
-      <!-- <a-menu
-        v-model:value="activeKey"
-        :collapsed-width="64"
-        :collapsed-icon-size="22"
-        mode="vertical"
-        :options="myMenuOptions"
-        @click="onNavClick"
-      >
-      </a-menu> -->
-
       <Nav
         v-model:activeKey="activeKey" :menu="myMenuOptions" @set-active-key="setActiveKey"
         @nav-handle="onNavClick"
