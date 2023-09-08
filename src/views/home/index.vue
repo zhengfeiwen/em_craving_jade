@@ -1,22 +1,16 @@
 <template>
-  <a-row class="home-container">
-    <a-col :span="4">
-      <Nav
-        v-model:activeKey="activeKey" :menu="myMenuOptions" @set-active-key="setActiveKey"
-        @nav-handle="onNavClick"
-      >
-        <template #footer="footer">
-          <div>{{ footer.name }}</div>
-        </template>
-      </Nav>
-    </a-col>
-    <a-col :span="15">
-      <Content />
-    </a-col>
-    <a-col :span="5">
-      <Aside />
-    </a-col>
-  </a-row>
+  <div class="home-container">
+    <Nav
+      v-model:activeKey="activeKey" :menu="myMenuOptions" @set-active-key="setActiveKey"
+      @nav-handle="onNavClick"
+    >
+      <template #footer="footer">
+        <div>{{ footer.name }}</div>
+      </template>
+    </Nav>
+    <Content />
+    <Aside />
+  </div>
 </template>
 
 <script setup lang="tsx" name="home">
