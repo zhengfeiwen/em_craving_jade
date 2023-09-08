@@ -33,6 +33,7 @@ export default ({ mode }) => defineConfig({
           resolveStyle: (name) => {
             // 二级组件路径调整
             if (name.includes('-group')) return `ant-design-vue/es/${name.replace('-group', '')}/style/index`
+            else if (name.includes('tab-pane')) return `ant-design-vue/es/${name.replace('tab-pane', 'tabs')}/style/index`
             else return `ant-design-vue/es/${name}/style/index`
           }
         }

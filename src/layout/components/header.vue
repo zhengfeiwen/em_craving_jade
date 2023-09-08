@@ -30,6 +30,7 @@
   </div>
 </template>
 <script lang="ts" setup name="layout-header">
+import { ref } from 'vue'
 import { ButtonType } from 'ant-design-vue/es/button'
 import { useLayoutStore } from '@/store/layout'
 import { storeToRefs } from 'pinia'
@@ -43,7 +44,6 @@ type LeftButton = {
   label: string,
   type: ButtonType
 }
-
 const isActive = (prop:string) => {
   return prop === activeNav.value
     ? 'link'

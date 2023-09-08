@@ -25,7 +25,6 @@
 <script lang="ts" setup name="layout">
 import appMain from './components/appMain.vue'
 import layoutHeader from './components/header.vue'
-import { CustomerServiceOutlined, CommentOutlined } from '@ant-design/icons-vue'
 </script>
 
 <style>

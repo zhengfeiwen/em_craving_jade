@@ -1,0 +1,99 @@
+.home-content{
+  background-color: #fff;
+  margin: 0 8px;
+  padding: 0;
+  .ant-empty{
+    padding: 40px 0;
+    .ant-empty-description{
+      font-size: 18px;
+      color: #8a919f;
+    }
+  }
+  .content__scroll{
+    .ant-tabs-nav{
+      margin: 0;
+      padding: 0 17px;
+    }
+    .content-item{
+      width: calc(100% - 34px);
+      padding: 17px 17px;
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid rgba(228,230,235,0.5);
+      user-select: none;
+      cursor: pointer;
+      &:hover{
+        background-color: #f7f8fa;
+      }
+      .content-main{
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        max-width: calc(100% - 124px);
+        .content-main__title{
+          font-weight: 700;
+          line-height: 24px;
+          font-size: 20px;
+          max-width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-break: break-all;
+        }
+        .content-main__short{
+          font-size: 13px;
+          line-height: 26px;
+          color: #8a919f;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-break: break-all;
+        }
+        .content-main__footer{
+          display: flex;
+          flex-direction: row;
+          color: #8a919f;
+          margin-top: 2px;
+          span{
+            &:hover{
+              color: #1e80ff;
+            }
+            .anticon{
+              margin-right: 4px;
+            }
+            + span {
+              margin-left: 12px;
+            }
+          }
+          .tag-body{
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            .ant-tag{
+              color: #8a919f;
+              margin: 0;
+              max-width: 70px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              word-break: break-all;
+              &:hover{
+                color: #1e80ff;
+              }
+              + .ant-tag{
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+      > img{
+        width: 108px;
+        height: 72px;
+        object-fit: cover;
+        margin-left: 20px;
+      }
+    }
+  }
+}

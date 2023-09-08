@@ -1,0 +1,36 @@
+.nav-body{
+  background-color: #fff;
+  padding: 8px;
+  margin: 0 8px;
+  .nav-item{
+    display: flex;
+    padding: 10px 17px;
+    cursor: pointer;
+    &:hover{
+      background-color: #f7f8fa;
+      > span {
+        color: #1e80ff;
+      }
+      .label{
+        color: #1e80ff;
+      }
+    }
+    &.active{
+      background-color: #eaf2ff;
+      > span {
+        color: #1e80ff;
+      }
+      .label{
+        color: #1e80ff;
+      }
+    }
+    > span {
+      font-size: 18px;
+    }
+    .label{
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+}

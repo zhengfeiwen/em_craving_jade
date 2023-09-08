@@ -36,6 +36,8 @@ html, body{
   width: 100vw;
   overflow: hidden;
   margin: 0;
+  -webkit-font-smoothing: unset!important;
+  font-family: -apple-system,system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial!important;
 }
 .icon{
   font-size: 1rem;

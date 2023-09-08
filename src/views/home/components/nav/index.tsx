@@ -20,33 +20,21 @@ export default defineComponent({
   }>,
   emits: ['set-active-key'],
   setup(props, { emit }) {
-    const { menu } = toRefs(props)
-    let i = 0
-    const onChange = (i: number) => {
-      return i + 1
+    const { activeKey, menu } = toRefs(props)
+    const onChange = (key: string) => {
+      emit('set-active-key', key)
     }
-    i = onChange(i)
-    setTimeout(() => {
-      emit('set-active-key', 'test')
-    }, 5000)
-
-    const label = <div>1111</div>
-
-    onMounted(() => {
-    })
     return () => (
       <div class='nav-body'>
         {menu.value.map((v: MenuOptionItem) => {
-          return <div class="nav-item">
+          return <div class={'nav-item ' + (v.key === activeKey.value
+            ? 'active'
+            : '') } onClick={() => onChange(v.key)}>
             {v.icon}
-            {label}
             <div class="label">{ v.label }</div>
           </div>
         })}
       </div>
     )
-  },
-  mounted() {
-    console.log(this.activeKey)
   }
 })

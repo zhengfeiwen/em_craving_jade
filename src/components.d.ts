@@ -18,6 +18,8 @@ declare module 'vue' {
     AInputSearch: typeof import('ant-design-vue/es')['InputSearch']
     ARow: typeof import('ant-design-vue/es')['Row']
     BellFilled: typeof import('@ant-design/icons-vue')['BellFilled']
+    CommentOutlined: typeof import('@ant-design/icons-vue')['CommentOutlined']
+    CustomerServiceOutlined: typeof import('@ant-design/icons-vue')['CustomerServiceOutlined']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     Nav: typeof import('./components/nav/index.tsx')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
