@@ -18,13 +18,14 @@ type TopicType = {
   hot: number|string
 }
 
-import { PlusOutlined } from '@ant-design/icons-vue'
+import { ContainerFilled, PlusOutlined } from '@ant-design/icons-vue'
 import CardList from './components/cardList/index'
+import { Statistic } from 'ant-design-vue' 
 import './index.scss'
 
 export default defineComponent({
   name: 'Aside',
-  components: { CardList },
+  components: { CardList, 'a-statistic': Statistic },
   setup() {
     const recommendSrc = 'https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/img/rec.476fe07.png'
     const articleList = ref<ArticleType[]>([
@@ -67,7 +68,7 @@ export default defineComponent({
     return () => (
       <div class="aside-body">
         <div class="aside-article">
-          <CardList title='文章榜'>
+          <CardList title='文章榜' icon={<ContainerFilled />}>
             {{
               list: () => {
                 return articleList.value.map((v, index) => {
@@ -110,7 +111,7 @@ export default defineComponent({
                     <a class='topic-title'>#{ v.title }#</a>
                     <span class="hot">{ isNaN(v.hot as any)
                       ? v.hot + '+'
-                      : v.hot }</span>
+                      : <a-statistic valueStyle={{ fontSize: '15px' }} value={v.hot}></a-statistic> }</span>
                   </div>
                 })
               }

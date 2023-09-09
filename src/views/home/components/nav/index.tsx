@@ -1,4 +1,4 @@
-import { defineComponent, onMounted } from 'vue'
+import { defineComponent } from 'vue'
 import { MenuOptionItem } from '@/type/index'
 import { SlotsType } from 'vue'
 import './index.scss'

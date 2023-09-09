@@ -104,6 +104,8 @@ module.exports = {
     'tailwindcss/no-custom-classname': ['off'],
     // 禁止使用拖尾逗号 
     'comma-dangle': ['error', 'never'],
+    // 
+    'vue/require-default-prop': ['off'],
     'vue/max-attributes-per-line': [
       'error', {
         'singleline': { 'max': 3 },      

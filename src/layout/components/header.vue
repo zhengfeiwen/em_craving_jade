@@ -16,6 +16,42 @@
         size="large"
         @search="onSearch"
       />
+      <a-dropdown-button type="primary" class="creator-button" @click="handleButtonClick">
+        创作者中心
+        <template #overlay>
+          <div class="creator-body">
+            <div class="creator-action">
+              <div class="item">
+                <ContainerFilled />
+                <span>写文章</span>
+              </div>
+              <div class="item">
+                <ContainerFilled />
+                <span>写代码</span>
+              </div>
+              <div class="item">
+                <ContainerFilled />
+                <span>写代码</span>
+              </div>
+            </div>
+            <div class="creator-other">
+              <p>创作灵感</p>
+              <div class="line">
+                博客搬家有好礼，邀新矿石拿不停｜掘金·日新计划日新计划日新计划日新计划
+              </div>
+              <div class="line">
+                博客搬家有好礼，邀新矿石拿不停｜掘金·日新计划
+              </div>
+              <div class="line">
+                博客搬家有好礼，邀新矿石拿不停｜掘金·日新计划
+              </div>
+            </div>
+          </div>
+        </template>
+        <template #icon>
+          <DownOutlined />
+        </template>
+      </a-dropdown-button>
       <a-badge count="5">
         <BellFilled style="font-size: 24px; color: #c6c6c6;" />
       </a-badge>
@@ -66,6 +102,10 @@ const onchangeNav = function (nav: LeftButton) {
 const onSearch = function() {
 
 }
+// 写文章
+const handleButtonClick = function() {
+
+}
 </script>
 
 <style lang="scss" scoped>
@@ -101,6 +141,55 @@ const onSearch = function() {
         top: 6px;
         right: 6px;
       }
+    }
+  }
+}
+.creator-button{
+  border-radius: 0;
+  margin-left: 20px;
+  ::v-deep .ant-btn{
+    border-radius: 0;
+  }
+}
+.creator-body{
+  background-color: #fff;
+  padding: 10px 17px;
+  margin-top: 10px;
+  border: 1px solid #e4e6eb;
+  box-shadow: 0 0 24px rgba(81,87,103,.16);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  .creator-action{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-bottom: 1px solid #e4e6eb;
+    .item{
+      display: flex;
+      flex-direction: column;
+      .anticon{
+        font-size: 40px;
+        color: #1e80ff;
+      }
+    }
+  }
+  .creator-other{
+    padding: 0 10px;
+    > p {
+      margin: 12px 0 4px 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: #bbb;
+    }
+    .line{
+      font-size: 14px;
+      line-height: 24px;
+      width: 380px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 }

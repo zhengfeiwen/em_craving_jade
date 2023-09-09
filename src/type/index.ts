@@ -8,3 +8,5 @@ export type MenuOptionItem = {
   path: string,
   icon?: String|VNode
 }
+
+export type IconType = VNode|Boolean
