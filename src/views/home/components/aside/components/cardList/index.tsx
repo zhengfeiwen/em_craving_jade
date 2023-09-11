@@ -14,7 +14,6 @@ export default defineComponent({
   },
   setup(props, { slots }) {
     const { icon, title } = toRefs(props)
-    console.log(icon.value)
     const simpleImage = Empty.PRESENTED_IMAGE_SIMPLE
     return () => (
       <div class="card-list-body">
