@@ -12,7 +12,8 @@
     display: flex;
     flex-direction: column;
     margin-left: 10px;
-    width: calc(100% - 76px);
+    min-width: calc(100% - 90px);
+    width: calc(100% - 90px);
     span{
       color: #212121;
       font-size: 12px;
@@ -25,6 +26,12 @@
       &.title{
         font-size: 14px;
         font-weight: 700;
+      }
+    }
+    + a{
+      text-decoration: none;
+      .anticon{
+        margin-right: 4px;
       }
     }
   }
